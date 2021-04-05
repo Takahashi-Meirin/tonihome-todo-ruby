@@ -1,0 +1,21 @@
+<%# CSS・・・assets/stylesheets/shared/header.css %>
+<header class='top-page-heder'>
+  <div class='app-top'>
+    <div clsaa='app-title'>
+      とにかくホメてくれるto doリスト
+    </div>
+
+  <%# ユーザーの状態によって表記を変える %>
+    <ul class='top-right'>
+      <%# if user_signed_in? %>
+        <%# <li><%= link_to '新規作成', "#" > </li> %>
+        <%# <li><%= link_to current_user.nickname, "#" > </li> %>
+        <%# <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete > </li> %>
+      <%# else %>
+        <li><%= link_to 'ログイン',  new_user_session_path %></li>
+        <li><%= link_to '新規登録',  new_user_registration_path %></li>
+      <%# end %>
+    </ul>
+    
+  </div>
+</header>
