@@ -1,0 +1,11 @@
+<%= render "shared/header" %>
+  <% @lists.each do |list| %>
+    <div class="list" >
+      <div class="list-title">
+      <%# 各to doリストの編集画面にアクセスすることができる %>
+        <%= link_to "#", method: :get do %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+<%= render "shared/footer" %>
