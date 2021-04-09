@@ -1,9 +1,8 @@
-.top-page-header {
+/* .top-page-header {
   width: 100vw;
-  padding: 2vh 15vw;
   display: flex;
   flex-direction: column;
-}
+} */
 
 .app-top {
   display: flex;
@@ -22,11 +21,7 @@
   display: flex;
   justify-content: space-between;
   list-style: none;
-}
-
-li {
   margin-right: 2vw;
   color: #333333;
   background-color: gray;
-  padding: 5px;
 }

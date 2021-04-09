@@ -1,13 +1,26 @@
-<%# render "shared/header" %>
+<%# アプリのヘッダー部分 %>
+<%= render "shared/header" %>
+<%# //アプリのヘッダー部分// %>
 
-  <%# @lists.each do |list| %>
-    <div class="list" >
-      <div class="list-title">
-      <%# 各to doリストの編集画面にアクセスすることができる %>
-        <%= link_to "#", method: :get do %>
-        <% end %>
-      </div>
+<%# topページのbody部分 %>
+<div class='index-background'>
+  <div class='list-index'>
+    <%# 編集権限のあるto doリストのタイトルを一覧にする %>
+    <div class='list-title'>
+    タイトル①
     </div>
-  <%# end %>
+    <%# //編集権限のあるto doリストのタイトルを一覧にする// %>
 
-<% render "shared/footer" %>
+    <%# 共有しているメンバーを表示する %>
+    <%# <ul class='list-member'>
+      <li>メンバー①</li>
+      <li>メンバー②</li>
+    </ul> %>
+  </div>
+</div>
+
+<%# //topページのbody部分// %>
+
+<%# アプリのフッター部分 %>
+<%= render "shared/footer" %>
+<%# //アプリのフッター部分// %>
