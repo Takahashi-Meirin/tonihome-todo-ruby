@@ -6,8 +6,8 @@
     </h2>
     <ul class='top-right'>
     <%# ユーザーのログイン状態によって表示を変更する %>
-      <li>ログイン</li>
-      <li>新規登録</li>
+      <li><%= link_to 'リスト作成', new_list_path, class: "create-list" %></li>
+      <li><%= link_to 'ニックネーム', "#", class: "user-nickname" %></li>
     </ul>
   </div>
 </header>

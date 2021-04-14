@@ -1,8 +1,8 @@
-/* .top-page-header {
+.top-page-header {
   width: 100vw;
   display: flex;
   flex-direction: column;
-} */
+}
 
 .app-top {
   display: flex;
@@ -23,5 +23,18 @@
   list-style: none;
   margin-right: 2vw;
   color: #333333;
-  background-color: gray;
+}
+
+.create-list {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: white;
+  font-weight: bold;
+}
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: white;
+  font-weight: bold;
 }
