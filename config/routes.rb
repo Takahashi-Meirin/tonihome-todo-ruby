@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   # ルートパスへアクセスすると、lists/index.html.erbが表示される
   root to: "lists#index"
-  # itemsコントローラーで使用するアクションの定義
+  # tasksコントローラーで使用するアクションの定義
   resources :lists do
     resources :tasks
   end
