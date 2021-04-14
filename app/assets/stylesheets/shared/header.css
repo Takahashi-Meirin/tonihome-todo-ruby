@@ -12,6 +12,7 @@
 }
 
 .app-title {
+  text-decoration: none;
   font-size: 20px;
   color: white;
   margin-left: 3vw;
@@ -33,6 +34,20 @@
 }
 
 .user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: white;
+  font-weight: bold;
+}
+
+.signup {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: white;
+  font-weight: bold;
+}
+
+.login {
   text-decoration: none;
   margin-right: 3vw;
   color: white;

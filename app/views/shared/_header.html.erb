@@ -2,12 +2,14 @@
 <header class='top-page-header'>
   <div class='app-top'>
     <h2 class='app-title'>
-      とにかくホメてくれるto Doリスト
+      <%= link_to 'とにかくホメてくれるto Doリスト', lists_path %>
     </h2>
     <ul class='top-right'>
     <%# ユーザーのログイン状態によって表示を変更する %>
       <li><%= link_to 'リスト作成', new_list_path, class: "create-list" %></li>
       <li><%= link_to 'ニックネーム', "#", class: "user-nickname" %></li>
+      <li><%= link_to 'ユーザー新規登録', new_user_registration_path, class: "signup" %></li>
+      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
     </ul>
   </div>
 </header>
