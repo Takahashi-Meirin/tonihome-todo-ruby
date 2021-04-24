@@ -5,11 +5,15 @@
       <%= link_to 'とにかくホメてくれるto Doリスト', lists_path %>
     </h2>
     <ul class='top-right'>
-    <%# ユーザーのログイン状態によって表示を変更する %>
-      <li><%= link_to 'リスト作成', new_list_path, class: "create-list" %></li>
-      <li><%= link_to 'ニックネーム', "#", class: "user-nickname" %></li>
-      <li><%= link_to 'ユーザー新規登録', new_user_registration_path, class: "signup" %></li>
-      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+    <%# ユーザーのログイン状態によって表示を変更する %>    
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.nickname, '#', class: "user-nickname" %> </li>
+        <li><%= link_to 'リスト作成', new_list_path, class: "create-list" %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %> </li>
+      <% else %>
+        <li><%= link_to 'ログイン',  new_user_session_path, class: "login" %></li>
+        <li><%= link_to '新規登録',  new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
     </ul>
   </div>
 </header>

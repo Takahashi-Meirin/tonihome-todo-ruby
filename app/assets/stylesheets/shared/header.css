@@ -12,7 +12,6 @@
 }
 
 .app-title {
-  text-decoration: none;
   font-size: 20px;
   color: white;
   margin-left: 3vw;
@@ -28,28 +27,35 @@
 
 .create-list {
   text-decoration: none;
-  margin-right: 3vw;
+  margin-right: 2vw;
   color: white;
   font-weight: bold;
 }
 
 .user-nickname {
   text-decoration: none;
-  margin-right: 3vw;
+  margin-right: 2vw;
   color: white;
   font-weight: bold;
 }
 
-.signup {
+.sign-up {
   text-decoration: none;
-  margin-right: 3vw;
+  margin-right: 2vw;
   color: white;
   font-weight: bold;
 }
 
 .login {
   text-decoration: none;
-  margin-right: 3vw;
+  margin-right: 2vw;
+  color: white;
+  font-weight: bold;
+}
+
+.logout {
+  text-decoration: none;
+  margin-right: 2vw;
   color: white;
   font-weight: bold;
 }
