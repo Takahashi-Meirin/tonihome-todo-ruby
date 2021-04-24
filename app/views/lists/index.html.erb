@@ -7,7 +7,13 @@
   <div class='list-index'>
     <%# 編集権限のあるto doリストのタイトルを一覧にする %>
     <div class='list-title'>
-    タイトル①
+      <% @lists.each do |list| %>
+        <li>
+          <%= link_to list.title, list_path(list) %>
+          <%= link_to '編集',"#" %>
+          <%= link_to'削除', "#", method: :delete %>
+        </li>
+      <% end %>
     </div>
     <%# //編集権限のあるto doリストのタイトルを一覧にする// %>
 
