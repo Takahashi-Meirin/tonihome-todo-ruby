@@ -8,11 +8,9 @@
     <%# 編集権限のあるto doリストのタイトルを一覧にする %>
     <div class='list-title'>
       <% @lists.each do |list| %>
-        <li>
-          <%= link_to list.title, list_path(list) %>
-          <%= link_to '編集',"#" %>
-          <%= link_to'削除', "#", method: :delete %>
-        </li>
+        <h2><%= link_to list.title, list_path(list) %></h2>
+        <%= link_to '編集', edit_list_path(list) %>
+        <%= link_to '削除', list_path(list), method: :delete %>
       <% end %>
     </div>
     <%# //編集権限のあるto doリストのタイトルを一覧にする// %>

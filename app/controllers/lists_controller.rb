@@ -13,13 +13,13 @@ class ListsController < ApplicationController
   def create
     @list = List.new(list_params)
     @list.save
-    redirect_to root_path
+    redirect_to list_path(@list)
   end
 
   # リスト詳細ページ
-  # def show
-  #   @list = List.find(list_params)
-  # end
+  def show
+    @list = List.find(params[:id])
+  end
 
   # リスト編集ページ
   # def edit
