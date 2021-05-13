@@ -2,22 +2,22 @@
 <%= render "shared/header" %>
 <%# //アプリのヘッダー部分// %>
 <hr>
-<h2><%= @list.title %></h2>
+<h2>リストのタイトル「<%= @list.title %>」</h2>
 <hr>
 
 <hr>
 <p>メンバー一覧</p>
 <hr>
 
-<h2>アイテム</h2>
+<h2>新規アイテム作成</h2>
+<%= form_with model: [@list, Task.new] do |form| %>
+  <%= form.text_field :item %>
+  <%= form.submit 'アイテムを追加' %>
+<%end%>
+
+<h2>アイテム一覧</h2>
 <% @list.tasks.each do |task| %>
   <%= task.item %>
-<% end %>
-
-<h2>新規アイテム作成</h2>
-<%= form_for [@list, Task.new] do |f|%>
-<%= f.text_field :item %>
-  <%= f.submit %>
 <% end %>
 
 <%# アプリのフッター部分 %>
