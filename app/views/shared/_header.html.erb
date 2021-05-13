@@ -1,21 +1,19 @@
 <%# CSS・・・assets/stylesheets/shared/header.css %>
-<header class='top-page-heder'>
+<header class='top-page-header'>
   <div class='app-top'>
-    <div class='app-title'>
-      とにかくホメてくれるto Doリスト
-    </div>
-
-  <%# ユーザーの状態によって表記を変える %>
+    <h2 class='app-title'>
+      <%= link_to 'とにかくホメてくれるto Doリスト', lists_path %>
+    </h2>
     <ul class='top-right'>
-      <%# if user_signed_in? %>
-        <%# <li><%= link_to '新規作成', "#" > </li> %>
-        <%# <li><%= link_to current_user.nickname, "#" > </li> %>
-        <%# <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete > </li> %>
-      <%# else %>
-        <li><%= link_to 'ログイン',  new_user_session_path %></li>
-        <li><%= link_to '新規登録',  new_user_registration_path %></li>
-      <%# end %>
+    <%# ユーザーのログイン状態によって表示を変更する %>    
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.nickname, '#', class: "user-nickname" %> </li>
+        <li><%= link_to 'リスト作成', new_list_path, class: "create-list" %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %> </li>
+      <% else %>
+        <li><%= link_to 'ログイン',  new_user_session_path, class: "login" %></li>
+        <li><%= link_to '新規登録',  new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
     </ul>
-    
   </div>
 </header>

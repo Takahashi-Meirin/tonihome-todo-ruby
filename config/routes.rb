@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # ユーザー機能に必要な複数のルーティングを１度に生成してくれる
+  devise_for :users
+  # ルートパスへアクセスすると、lists/index.html.erbが表示される
+  root to: "lists#index"
+  # tasksコントローラーで使用するアクションの定義
+  resources :lists do
+    resources :tasks
+  end
+
 end

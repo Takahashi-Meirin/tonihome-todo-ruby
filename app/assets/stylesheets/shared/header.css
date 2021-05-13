@@ -1,6 +1,5 @@
 .top-page-header {
   width: 100vw;
-  padding: 2vh 15vw;
   display: flex;
   flex-direction: column;
 }
@@ -22,11 +21,41 @@
   display: flex;
   justify-content: space-between;
   list-style: none;
-}
-
-li {
   margin-right: 2vw;
   color: #333333;
-  background-color: gray;
-  padding: 5px;
+}
+
+.create-list {
+  text-decoration: none;
+  margin-right: 2vw;
+  color: white;
+  font-weight: bold;
+}
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 2vw;
+  color: white;
+  font-weight: bold;
+}
+
+.sign-up {
+  text-decoration: none;
+  margin-right: 2vw;
+  color: white;
+  font-weight: bold;
+}
+
+.login {
+  text-decoration: none;
+  margin-right: 2vw;
+  color: white;
+  font-weight: bold;
+}
+
+.logout {
+  text-decoration: none;
+  margin-right: 2vw;
+  color: white;
+  font-weight: bold;
 }

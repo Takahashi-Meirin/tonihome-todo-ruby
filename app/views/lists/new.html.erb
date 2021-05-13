@@ -1,29 +1,45 @@
+<%# アプリのヘッダー部分 %>
 <%= render "shared/header" %>
+<%# //アプリのヘッダー部分// %>
 
+<%# topページのbody部分 %>
 <div class="new-list">
-    <h3 class="new-list-top">リスト作成
-      <input type="submit" value="リストを共有する" class="ok-buttan">
-    </h3>
-    <form action="#" method="post" name="title-form" class="new-title">
-      タイトル：<input type="text" placeholder="to Doリストのタイトル">
-    </form>
-    <!-- 共有するメンバーを追加する -->
+    <h1 class="new-list-top">リスト新規作成
+    </h1>
+
+    <%# リストのタイトルを入力 %>
+    <%= form_with model: @list, class: "new-title" do |form| %>
+      <%= form.text_field :title %>
+      <%= form.submit %>
+    <%end%>
+    <%# //リストのタイトルを入力// %>
+
+    <%# 共有するメンバーを検索する %>
     <div class="new-member">
       誰と共有する？
     </div>
-    <!-- //共有するメンバーを追加する -->
-    <form action="#" method="post" name="item-form" class="new-item">
-      項目：<input type="text" >
-    </form>
-    <!-- 追加した項目を一覧にする -->
-    <div class="item-lineup">
-      <!-- < @items.each do |item| >
-        < task.item %>
-      <% end %> -->
-      アイテム①
-    </div>  
-    <!-- 追加した項目を一覧にする -->
+    <%# //共有するメンバーを検索する// %>
+
+    <%# アイテムを追加 %>
+    <%# <h1>新規アイテム作成</h1> %>
+    <%#= form_for [@list, Task.new] do |f| %>
+      <%#= f.text_field :item %>
+      <%#= f.submit %>
+    <%#end%>
+    <%# //アイテムを追加// %>
+
+    <%# 追加したアイテムを一覧にして表示する %>
+    <%# <div class="item-lineup"> %>
+      <%# <h1>アイテム</h1> %>
+        <%# @list.tasks.each do |task|%>
+            <%#= task.item %>
+        <%# end %>
+    <%# </div>   %>
+    <%# //追加したアイテムを一覧にして表示する// %>
 
 </div>
+<%# //topページのbody部分// %>
 
+<%# アプリのフッター部分 %>
 <%= render "shared/footer" %>
+<%# //アプリのフッター部分// %>
