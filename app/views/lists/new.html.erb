@@ -4,13 +4,12 @@
 
 <%# topページのbody部分 %>
 <div class="new-list">
-    <h1 class="new-list-top">リスト新規作成
-    </h1>
+    <h1 class="new-list-top">リスト新規作成</h1>
 
     <%# リストのタイトルを入力 %>
     <%= form_with model: @list, class: "new-title" do |form| %>
-      <%= form.text_field :title %>
-      <%= form.submit %>
+      リストのタイトルは？<%= form.text_field :title %>
+      <%= form.submit 'リストを作成' %>
     <%end%>
     <%# //リストのタイトルを入力// %>
 
@@ -19,23 +18,6 @@
       誰と共有する？
     </div>
     <%# //共有するメンバーを検索する// %>
-
-    <%# アイテムを追加 %>
-    <%# <h1>新規アイテム作成</h1> %>
-    <%#= form_for [@list, Task.new] do |f| %>
-      <%#= f.text_field :item %>
-      <%#= f.submit %>
-    <%#end%>
-    <%# //アイテムを追加// %>
-
-    <%# 追加したアイテムを一覧にして表示する %>
-    <%# <div class="item-lineup"> %>
-      <%# <h1>アイテム</h1> %>
-        <%# @list.tasks.each do |task|%>
-            <%#= task.item %>
-        <%# end %>
-    <%# </div>   %>
-    <%# //追加したアイテムを一覧にして表示する// %>
 
 </div>
 <%# //topページのbody部分// %>
